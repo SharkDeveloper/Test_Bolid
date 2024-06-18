@@ -52,7 +52,7 @@ Test_Bolid/
 - Docker
 - Docker Compose
 
-## Установка и запуск
+## Установка и запуск на локальном сервере
 
 1. Клонировать репозиторий:
 
@@ -60,7 +60,7 @@ Test_Bolid/
     git clone https://github.com/SharkDeveloper/Test_Bolid.git
     cd Test_Bolid
     ```
-2. Создать файл .env и установить переменные окружения:
+2. В файле .env установить свои переменные окружения(рекомендуется не использовать предустанволенные):
 
     ```bash
     POSTGRES_USER=...
