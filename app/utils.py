@@ -6,8 +6,9 @@ def load_events_from_json(db: Session, filename: str) -> None:
     """
     Загрузить события из JSON файла и сохранить их в базе данных.
 
-    :param db: Сессия базы данных
-    :param filename: Имя файла JSON
+    Args:
+        db (Session): Сессия базы данных.
+        filename (str): относительный путь до JSON файла с событиями.
     """
     with open(filename, 'r') as f:
         events = json.load(f)

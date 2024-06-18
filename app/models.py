@@ -6,6 +6,12 @@ from datetime import datetime
 class Sensor(Base):
     """
     Модель базы данных для датчиков.
+
+    Attributes:
+        id (int): Уникальный идентификатор датчика.
+        name (str): Название датчика.
+        type (int): Тип датчика.
+        events (relationship): Связь с моделью событий (Event).
     """
     __tablename__ = 'sensors'
 
@@ -18,6 +24,15 @@ class Sensor(Base):
 class Event(Base):
     """
     Модель базы данных для событий.
+
+    Attributes:
+        id (int): Уникальный идентификатор события.
+        sensor_id (int): Идентификатор датчика, к которому привязано событие.
+        name (str): Название события.
+        temperature (float): Температура, зарегистрированная в событии.
+        humidity (float): Влажность, зарегистрированная в событии.
+        created_at (datetime): Время создания события.
+        sensor (relationship): Связь с моделью датчика (Sensor).
     """
     __tablename__ = 'events'
 

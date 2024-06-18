@@ -23,6 +23,13 @@ services:
     depends_on:
       - db
 
+  tests:
+    build: .
+    command: pytest tests/
+    depends_on:
+      - db
+      - web
+
 
 volumes:
   postgres_data:
