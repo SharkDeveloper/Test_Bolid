@@ -1,0 +1,79 @@
+# Тестовое задание: Backend
+
+Этот репозиторий содержит решение тестового задания Backend для [Bolid](https://observant-resistance-a1d.notion.site/Backend-fefe433815854ea4829bef60dca4228b).
+
+## Описание
+
+В данном проекте реализовано решение тестового задания Backend для Bolid. Решение включает в себя следующие основные компоненты:
+
+- **API**: Реализация API с использованием FastAPI для работы с событиями и датчиками.
+- **База данных**: Инициализация и миграции базы данных с использованием SQLAlchemy и Alembic.
+- **Модели данных**: Определение моделей данных для событий и датчиков.
+- **CRUD операции**: Реализация операций создания, чтения, обновления и удаления (CRUD) для событий и датчиков.
+
+## Структура проекта
+
+Test_Bolid/  
+│  
+├── app/  
+│ ├── init.py  
+│ ├── crud.py  
+│ ├── database.py  
+│ ├── main.py  
+│ ├── models/  
+│ │ ├── init.py  
+│ │ ├── event.py  
+│ │ └── sensor.py  
+│ ├── routers/  
+│ │ ├── init.py  
+│ │ ├── events.py  
+│ │ └── sensors.py  
+│ └── schemas/  
+│ ├── init.py  
+│ ├── event.py  
+│ └── sensor.py  
+│  
+├── alembic/  
+│ ├── versions/  
+│ │ └── ...  
+│ ├── env.py  
+│ ├── README  
+│ └── script.py.mako  
+│  
+├── .env  
+├── .gitignore  
+├── alembic.ini  
+├── Dockerfile  
+├── README.md  
+└── requirements.txt  
+
+## Требования
+
+- Docker
+- Docker Compose
+
+## Установка и запуск
+
+1. Клонировать репозиторий:
+
+    ```bash
+    git clone https://github.com/SharkDeveloper/Test_Bolid.git
+    cd Test_Bolid
+    ```
+2. Создать файл .env и установить переменные окружения:
+
+    ```bash
+    POSTGRES_USER=...
+    POSTGRES_PASSWORD=...
+    POSTGRES_DB=...
+    ```
+
+3. Запустить Docker Compose:
+
+    ```bash
+    docker-compose up --build
+    ```
+
+## Дополнительная информация
+
+Для более подробной информации обратитесь к [документации API](#) и [документации по базе данных](#).
