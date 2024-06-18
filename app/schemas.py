@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import List, Optional
+from datetime import datetime
 
 class SensorBase(BaseModel):
     """
@@ -43,7 +44,7 @@ class Event(EventBase):
     Схема для отображения события.
     """
     id: int
-    created_at: Optional[str]
+    created_at: Optional[datetime]
 
     class Config:
         orm_mode = True

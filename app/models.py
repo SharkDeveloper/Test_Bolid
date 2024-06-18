@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, TIMESTAMP
 from sqlalchemy.orm import relationship
 from .database import Base
 from datetime import datetime
@@ -26,6 +26,6 @@ class Event(Base):
     name = Column(String, index=True)
     temperature = Column(Float)
     humidity = Column(Float)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(TIMESTAMP, default=datetime.utcnow)
 
     sensor = relationship("Sensor", back_populates="events")
