@@ -13,5 +13,8 @@ app.include_router(events.router, prefix="/events", tags=["events"])
 def read_root() -> dict:
     """
     Корневой эндпоинт для проверки работоспособности API.
+
+    Returns:
+        dict: Приветствующая фраза.
     """
     return {"message": "Добро пожаловать в Bolid API"}
