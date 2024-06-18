@@ -11,6 +11,9 @@ router = APIRouter()
 def get_db() -> Session:
     """
     Предоставить сессию базы данных для внедрения зависимости.
+
+    Yields:
+        Session: Сессия базы данных.
     """
     db = SessionLocal()
     try:
